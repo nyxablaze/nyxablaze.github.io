@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <h1 style="font-size:150%;text-align:center;">Server Management - Nyxablaze's documentation</h1>
+    <div>
+      <h1>Setting up Server</h1>
+      <h2>STEP 1: ARCH INSTALLATION</h2>
+      <a href='https://wiki.archlinux.org/title/installation_guide'>Installation Guide</a>
+      <p> When using PacStrap, include extras: <br>
+        &#x2022 git <br>
+        &#x2022 networkmanager <br>
+        &#x2022 yay <br>
+        &#x2022 xorg <br>
+        &#x2022 xorg-xinit <br>
+        &#x2022 i3-wm <br>
+        &#x2022 i3lock <br>
+        &#x2022 i3status <br>
+        &#x2022 i3blocks <br>
+        &#x2022 dmenu <br>
+        &#x2022 terminator <br>
+        &#x2022 firefox <br>
+        &#x2022 sudo <br>
+        i.e. pacstrap command will look like this: <br>
+        <code style="font-size: 150%">pacstrap -K /mnt base linux linux-firmware git networkmanager yay xorg xorg-xinit i3-wm i3lock i3status i3blocks dmenu terminator firefox sudo </code> <br>
+        <b> Ensure you are in the sudoers group, so you can use command sudo successfully. </b>
+</p>
+        <h2>STEP 2: SETTING UP I3 WM</h2>
+        <p> You should have all i3 files installed from pacstrap. if not, run
+        <h3>&#x2022 Copying files</h3>
