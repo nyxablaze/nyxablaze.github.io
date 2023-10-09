@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #FFF5B6;
+            font-family: Nurito, Arial, sans-serif;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        p {
+            font-size: xx-small;
+            margin-bottom: 10px;
+        }
+        div {
+            padding: 20px;
+            line-height: 1.35;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>KwikiPhone Rentals - Web app project</h1>
+    <h2><b><em>Details:</em></b></h2>
+    <p>
+        This project was made for CITS1402's 2023 project. The code is currently private - as the project is still ongoing and the code for my web app contains answers to parts of the project. Sorry guys :] <br>
+        The web app is intended to be used on a kiosk/clerk machine running on a local server at the KwikiPhone Rentals facility. Data integrity checks are performed in the background for crucial functions such as IMEI and customer ID, so that it is difficult to have incorrect information. <br>
+        All in all, it's relatively simple Python code. Most every page's backend workings are about the same, just tweaked to the specific requirements of eaech table in the SQL database. <br>
+        <br>
+        <h2>Challenges</h2><br>
+        I faced some issues with getting foreign keys to work, even after including the execution of PRAGMA foreign_keys = ON; in the python code. In the end, I just used extra triggers, which solved the problem.<br>
+        I had to add error messages, as originally it would just return you to the same apge.<br>
+        <b>Cybersecurity:</b> there is no SQL Injection protection - the assumption is this will not be public and the employees will not be malicious.<br>
+        <h2>Improvements possible</h2><br>
+        The styling could be nicer, but I don't have time to tweak it anymore.<br>
+        The password protection feature is clunky - it only logs in everytime the browser is refreshed, there are no cookies used. This could be made less clunky.<br>
+        <h2>Worth mentioning:</h2><br>
+        It is important to note the CustomerID generation procedure - the program has a file, calling idlist.txt, and everytime a new customer is entered, the following procedure occurs:<br>
+        idlist.txt is opened. A random number between 1000000 and 9999999 is selected by the program. idlist.txt is then read and searched for this randomly generated integer. If it exists, the program repeats this process. If it doesn't exist in idlist.txt, the integer is used as the new customer's ID number, and it is appeneded to idlist.txt in order to log that the ID is now in use.<br>
+        <h1>Thankyou for reading</h1>
+    </p>
+    <a href='https://sidescraper.nyxablaze.tech'>You can access the tool through this link</a><br><br>
+            <em>written 09/10/2023 @ 0902 AWST <br>
+                - nyxablaze
+            </em>
+    </div>
+</body>
+</html>
