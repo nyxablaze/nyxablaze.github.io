@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Textbook notes</title>
+<!-- 2023-11-08 Wed 17:17 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1572ecd">1. Week 7 - Pages 646 - 664, 666 - 674 (Psychological Disorders chapter 15)</a>
+<ul>
+<li><a href="#org4f08209">1.1. Psychotherapy</a>
+<ul>
+<li><a href="#org933fbe9">1.1.1. Treatments for psychological disorders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org02e8195">2. Week 8 - Pages 363-372, 375-392 (Intelligence chaptenn 10) (10.2 up to broader conceptions of intelligence, 10.3, 10.4 up to sex difference in cognitive abilities)</a>
+<ul>
+<li><a href="#orgb4ec23e">2.1. Types of intelligence</a>
+<ul>
+<li><a href="#org401bfec">2.1.1. Crystallised</a></li>
+<li><a href="#orgbcd8d09">2.1.2. Fluid</a></li>
+</ul>
+</li>
+<li><a href="#org04ea04f">2.2. Measurement</a></li>
+<li><a href="#org01086fb">2.3. Types of reliability and validity in psychological Testing</a></li>
+</ul>
+</li>
+<li><a href="#org766b11d">3. Week 9 - Pages 502 - 504, 517 - 525, 526 - 534, 538 - 545 (personality chapter 13 summary)</a>
+<ul>
+<li><a href="#org898fa8f">3.1. Personality</a></li>
+<li><a href="#org7ca2ed8">3.2. Psychodynamic Perspective</a>
+<ul>
+<li><a href="#orgf90b035">3.2.1. Freud&rsquo;s Theory</a></li>
+<li><a href="#org4e2b593">3.2.2. Neoanalytic Theories</a></li>
+</ul>
+</li>
+<li><a href="#org5ee846c">3.3. Phenomenological-Humanistic Perspective</a>
+<ul>
+<li><a href="#orgf948c41">3.3.1. Humanistic Theories</a></li>
+<li><a href="#org97e3516">3.3.2. Self-Concept</a></li>
+</ul>
+</li>
+<li><a href="#org5467421">3.4. Trait Perspective</a>
+<ul>
+<li><a href="#org4ffa1c0">3.4.1. Identifying Traits</a></li>
+<li><a href="#orgfc8dc32">3.4.2. Cross-Situational Consistency</a></li>
+</ul>
+</li>
+<li><a href="#org2812744">3.5. Biological Foundations of Personality</a>
+<ul>
+<li><a href="#orgc17ee09">3.5.1. Genetics and Environment</a></li>
+<li><a href="#org95fa8ea">3.5.2. Eysenck&rsquo;s Theory</a></li>
+</ul>
+</li>
+<li><a href="#orgc7c1cc8">3.6. Social-Cognitive Perspective</a>
+<ul>
+<li><a href="#orgbcb09d2">3.6.1. Reciprocal Determinism</a></li>
+<li><a href="#org6f37232">3.6.2. Rotter&rsquo;s Expectancy Theory</a></li>
+<li><a href="#orgae11a3e">3.6.3. Bandura&rsquo;s Self-Efficacy</a></li>
+<li><a href="#orgc846f32">3.6.4. Mischel and Shoda&rsquo;s CAPS</a></li>
+</ul>
+</li>
+<li><a href="#org56c01c0">3.7. Culture, Gender, and Personality</a>
+<ul>
+<li><a href="#org4e4d14a">3.7.1. Cultural Differences</a></li>
+<li><a href="#orgd2dca4f">3.7.2. Gender Schemas</a></li>
+</ul>
+</li>
+<li><a href="#org71f5e34">3.8. Personality Assessment</a>
+<ul>
+<li><a href="#org23c1581">3.8.1. Methods</a></li>
+<li><a href="#orge4f5c0d">3.8.2. Personality Scales</a></li>
+<li><a href="#org1d9f1ba">3.8.3. Projective Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5b4a1bb">4. Week 10 and 11 - pages 696 - 704 (social chapter 17)</a>
+<ul>
+<li><a href="#org4d0f16d">4.1. Social Thinking</a>
+<ul>
+<li><a href="#org20de28e">4.1.1. Attribution Bias</a></li>
+<li><a href="#org2a08eff">4.1.2. First Impressions</a></li>
+<li><a href="#org2d3177f">4.1.3. Attitudes and Behavior</a></li>
+<li><a href="#org3895ee2">4.1.4. Persuasion</a></li>
+</ul>
+</li>
+<li><a href="#orga740053">4.2. Social Influence</a>
+<ul>
+<li><a href="#org503c4f0">4.2.1. Conformity</a></li>
+<li><a href="#orgc607af2">4.2.2. Compliance Techniques</a></li>
+<li><a href="#org82d2ed2">4.2.3. Social Loafing</a></li>
+<li><a href="#org2220fb7">4.2.4. Group Decision-Making</a></li>
+<li><a href="#org0bfa401">4.2.5. Deindividuation</a></li>
+</ul>
+</li>
+<li><a href="#orgee47cc5">4.3. Social Relations</a>
+<ul>
+<li><a href="#orgdf363ad">4.3.1. Attraction</a></li>
+<li><a href="#org2e0e0c9">4.3.2. Ostracism</a></li>
+<li><a href="#orgfa1b31a">4.3.3. Prejudice</a></li>
+<li><a href="#org8ccb974">4.3.4. Prosocial Behavior</a></li>
+<li><a href="#org63dd29b">4.3.5. Aggression</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9c50e89">5. Week 12 - pages 745 - 764, 769 - 772 (cross-cultural chapter 18)</a>
+<ul>
+<li><a href="#orga535651">5.1. Understand why it is important to look at cross-cultural and Indigenous issues</a>
+<ul>
+<li><a href="#orgfa87128">5.1.1. Appreciating Professional Development</a></li>
+<li><a href="#org2850c8a">5.1.2. Reflecting on Cultural Identity</a></li>
+</ul>
+</li>
+<li><a href="#orgbfe9863">5.2. Describe the skills and knowledge that form the base of cross-cultural psychology</a>
+<ul>
+<li><a href="#org0d7f5a0">5.2.1. Foundation of Cross-Cultural Psychology</a></li>
+</ul>
+</li>
+<li><a href="#orgd454dc6">5.3. Define multiculturalism and &rsquo;race&rsquo; and understand how Australia has worked toward being a multicultural society</a>
+<ul>
+<li><a href="#org99f104a">5.3.1. Multiculturalism and &rsquo;Race&rsquo;</a></li>
+</ul>
+</li>
+<li><a href="#org8c42b5b">5.4. Evaluate how we look at the similarities and differences between cultures and understand the implications of these differences</a>
+<ul>
+<li><a href="#orgaf3a704">5.4.1. Approaches to Cultural Differences</a></li>
+</ul>
+</li>
+<li><a href="#orgbf83836">5.5. Define Indigenous psychology and understand how psychologists work with Indigenous Australians</a>
+<ul>
+<li><a href="#org9f638d2">5.5.1. Indigenous Psychology</a></li>
+<li><a href="#org7009182">5.5.2. Ambiguous Position</a></li>
+</ul>
+</li>
+<li><a href="#org7f54224">5.6. Describe how Indigenous research is produced and by whom</a>
+<ul>
+<li><a href="#orgb0d89f7">5.6.1. Indigenous Research</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1572ecd" class="outline-2">
+<h2 id="org1572ecd"><span class="section-number-2">1.</span> Week 7 - Pages 646 - 664, 666 - 674 (Psychological Disorders chapter 15)</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4f08209" class="outline-3">
+<h3 id="org4f08209"><span class="section-number-3">1.1.</span> Psychotherapy</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The basic goal of all psychotherapy, no matter the approach, is to help people change their thoughts, feelings and behaviour patterns, so they can live happier and more productive lives.
+</p>
+
+<p>
+In Australia, one of the most important groups of professionals providing psychological treatment are <b>Clinical Psychologists.</b> Typically, Clin psychs have a Doctor of Clinical Psych or a Master of Clinical Psych and at least 6 years of intensive training and supervision in psychological assesment, research and therapy. Some Clinical Psychs may also hold a Doctor of Philosophy. <b>Psychiatrists</b>, on the other hand, are medical doctors who specialise in psychotherapy and biomedical treatments i.e. drug therapy.
+</p>
+</div>
+
+<div id="outline-container-org933fbe9" class="outline-4">
+<h4 id="org933fbe9"><span class="section-number-4">1.1.1.</span> Treatments for psychological disorders</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+There are two major types of treatments, with subcategories for each.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org35be995"></a>Psychological<br />
+<ol class="org-ol">
+<li><a id="org696f220"></a>Psychodynamic<br />
+<div class="outline-text-6" id="text-1-1-1-1-1">
+<p>
+Involves Psychoanalysis, popularised by Freud. Includes Brief psychodynamic therapies.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgf6419d6"></a>Psychoanalysis<br />
+<div class="outline-text-7" id="text-1-1-1-1-1-1">
+<p>
+Psychoanalysis -&gt; the specific approach to treatment that Freud developed. The goal being, to achieve insight (the conscious awareness of the psychodynamics that underlie their problems).
+</p>
+<ul class="org-ul">
+<li>This awareness permits patients to adjust behaviours to their current situations, rather than repeat maladaptive behaviours learned in childhood.</li>
+<li>As the patient repeatedly encounters and deals with repressed emotions, motives and conflicts within and outside therapy, the energy that was previously given to keeping unconscious conflicts under control can be redirected to more adaptive behaviours.</li>
+<li>&ldquo;Where there was ID, there shall ego be&rdquo; - Freud</li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li><a id="org948ac51"></a>Treatment Types<br />
+<ol class="org-ol">
+<li><a id="org7ac27bf"></a>Free Association<br />
+<div class="outline-text-9" id="text-1-1-1-1-1-1-1-1">
+<p>
+Clients verbally report without censorship any thoughts, feelings or images that enter their awareness. Analysts sit out of sight so the client&rsquo;s thought processes are all internal. The analyst does not always expect the technique to lead directly to unconscious material, but instead hopes that it will provide clues concerning important themes or issues. E.g., a client may suddenly stop having a stream of thoughts after mentioning her father, suggesting she was approaching a loaded topic and activated repressive defences.
+</p>
+</div>
+</li>
+<li><a id="orgd32ee01"></a>Dream Interpretation<br />
+<div class="outline-text-9" id="text-1-1-1-1-1-1-1-2">
+<p>
+Self explanatory
+</p>
+</div>
+</li>
+<li><a id="orgd07a0c0"></a>Resistance<br />
+<div class="outline-text-9" id="text-1-1-1-1-1-1-1-3">
+<p>
+some patients may resist during therapy as defensive manoeuvers that hinder the process of therapy. Usually means anxiety-arousing material is being approached.
+</p>
+</div>
+</li>
+<li><a id="org76d37f4"></a>Transference<br />
+<div class="outline-text-9" id="text-1-1-1-1-1-1-1-4">
+<p>
+When the patient irrationally transfers onto the therapist either positively or negatively based on past experiences.
+</p>
+</div>
+</li>
+<li><a id="org3a2c6bc"></a>Interpretation<br />
+<div class="outline-text-9" id="text-1-1-1-1-1-1-1-5">
+<p>
+Any statement by the therapist that is intended to provide the client with insight into his or her behaviour or dynamics.
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="org455e719"></a>Humanistic<br />
+<div class="outline-text-6" id="text-1-1-1-1-2">
+<p>
+Person centred therapy, popularised by Carl Rogers. Focuses on the idea that humans are capable of change, and the patient is given a space to explore themselves, rather than given solutions by the psych.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org54c379e"></a>Gestalt Therapy<br />
+<div class="outline-text-7" id="text-1-1-1-1-2-1">
+<p>
+Organised whole
+utilises a variety of imaginative techniques to help clients get in touch with their inner selves. performed in grouops.
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org8837c54"></a>Cognitive<br />
+<div class="outline-text-6" id="text-1-1-1-1-3">
+<p>
+Rational-emotive therapy (Ellis, ABCD) and Cognitive therapy (Beck).
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org431bff8"></a>ABCD<br />
+<div class="outline-text-7" id="text-1-1-1-1-3-1">
+<p>
+A(ctivating) B(elief) C(onsequences) D(isputing and changing of B)
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgbcd2e95"></a>Behavioural<br />
+<div class="outline-text-6" id="text-1-1-1-1-4">
+<p>
+Classical Conditioning
+</p>
+<ul class="org-ul">
+<li>exposure</li>
+<li>systematic desensitisation</li>
+<li>aversion therapy</li>
+</ul>
+<p>
+Operant Conditioning
+</p>
+<ul class="org-ul">
+<li>positive reinforcement</li>
+<li>punishment</li>
+<li>behavioural activation</li>
+</ul>
+<p>
+Modelling
+</p>
+<ul class="org-ul">
+<li>social skills training</li>
+</ul>
+<p>
+&rsquo;Third wave&rsquo; cognitive behavioural
+</p>
+<ul class="org-ul">
+<li>mindfulness based treatments</li>
+<li>Acceptance and commitment therapy</li>
+<li>Dialectical behaviour therapy</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgcd30cda"></a>Biological<br />
+<ol class="org-ol">
+<li><a id="orgbd47350"></a>Drug Therapy<br />
+<div class="outline-text-6" id="text-1-1-1-2-1">
+<p>
+Antidepressents, Antipsychotics, Anxiolytics
+</p>
+</div>
+</li>
+<li><a id="org991c850"></a>ECT (electro-convulsive therapy)<br />
+<div class="outline-text-6" id="text-1-1-1-2-2">
+<p>
+Induced seizers, high initial response (60 - 70%), high relapse rates, may cause brain damage if repeated frequently
+</p>
+</div>
+</li>
+<li><a id="org55dafa2"></a>Psycho-surgery<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org02e8195" class="outline-2">
+<h2 id="org02e8195"><span class="section-number-2">2.</span> Week 8 - Pages 363-372, 375-392 (Intelligence chaptenn 10) (10.2 up to broader conceptions of intelligence, 10.3, 10.4 up to sex difference in cognitive abilities)</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb4ec23e" class="outline-3">
+<h3 id="orgb4ec23e"><span class="section-number-3">2.1.</span> Types of intelligence</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org401bfec" class="outline-4">
+<h4 id="org401bfec"><span class="section-number-4">2.1.1.</span> Crystallised</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Solid memory
+</p>
+</div>
+</div>
+<div id="outline-container-orgbcd8d09" class="outline-4">
+<h4 id="orgbcd8d09"><span class="section-number-4">2.1.2.</span> Fluid</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+working memory
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org04ea04f" class="outline-3">
+<h3 id="org04ea04f"><span class="section-number-3">2.2.</span> Measurement</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Full scale IQ test
+</p>
+</div>
+</div>
+<div id="outline-container-org01086fb" class="outline-3">
+<h3 id="org01086fb"><span class="section-number-3">2.3.</span> Types of reliability and validity in psychological Testing</h3>
+<div class="outline-text-3" id="text-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Types of reliability</th>
+<th scope="col" class="org-left">Meaning and critical questions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Test-retest reliability</td>
+<td class="org-left">Are scores on the measure stable over time?</td>
+</tr>
+
+<tr>
+<td class="org-left">Internal Consistency</td>
+<td class="org-left">Do all of the items on the measure seem to be measuring the same thing as indicated by high correlations among them?</td>
+</tr>
+
+<tr>
+<td class="org-left">Interjudge reliability</td>
+<td class="org-left">Do different raters or scorers agree on their scoring or observations?</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Types of validity</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">construct validity</td>
+<td class="org-left">Do the questions of test items relate to all aspects of the construct being measured?</td>
+</tr>
+
+<tr>
+<td class="org-left">content validity</td>
+<td class="org-left">To what extent is the test actually measuring the construct of interest?</td>
+</tr>
+
+<tr>
+<td class="org-left">Criterion-related validity</td>
+<td class="org-left">Do scores on the test predict some present or future behaviour or outcome assumed to be affected by the construct being measured?</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org766b11d" class="outline-2">
+<h2 id="org766b11d"><span class="section-number-2">3.</span> Week 9 - Pages 502 - 504, 517 - 525, 526 - 534, 538 - 545 (personality chapter 13 summary)</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org898fa8f" class="outline-3">
+<h3 id="org898fa8f"><span class="section-number-3">3.1.</span> Personality</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Personality is the enduring patterns of thinking, feeling, and acting that characterize an individual&rsquo;s responses to life situations. It has internal causes and meaningful organization.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ca2ed8" class="outline-3">
+<h3 id="org7ca2ed8"><span class="section-number-3">3.2.</span> Psychodynamic Perspective</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgf90b035" class="outline-4">
+<h4 id="orgf90b035"><span class="section-number-4">3.2.1.</span> Freud&rsquo;s Theory</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+Personality dynamics involve conflicts between the id, ego, and superego. Defense mechanisms are used to cope with anxiety and instinctual urges. Personality development occurs through oral, anal, and phallic stages.
+</p>
+</div>
+</div>
+<div id="outline-container-org4e2b593" class="outline-4">
+<h4 id="org4e2b593"><span class="section-number-4">3.2.2.</span> Neoanalytic Theories</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Emphasize social and cultural factors. Object relations theory focuses on mental representations.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5ee846c" class="outline-3">
+<h3 id="org5ee846c"><span class="section-number-3">3.3.</span> Phenomenological-Humanistic Perspective</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgf948c41" class="outline-4">
+<h4 id="orgf948c41"><span class="section-number-4">3.3.1.</span> Humanistic Theories</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Emphasize subjective experiences and personal constructs of reality. Rogers&rsquo; theory highlights the self and self-actualization.
+</p>
+</div>
+</div>
+<div id="outline-container-org97e3516" class="outline-4">
+<h4 id="org97e3516"><span class="section-number-4">3.3.2.</span> Self-Concept</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+Research explores self-esteem, self-enhancement, self-verification, and character strengths.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5467421" class="outline-3">
+<h3 id="org5467421"><span class="section-number-3">3.4.</span> Trait Perspective</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org4ffa1c0" class="outline-4">
+<h4 id="org4ffa1c0"><span class="section-number-4">3.4.1.</span> Identifying Traits</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+Trait theorists aim to identify and measure basic personality dimensions. Factor analysis is used.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfc8dc32" class="outline-4">
+<h4 id="orgfc8dc32"><span class="section-number-4">3.4.2.</span> Cross-Situational Consistency</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+Traits are not highly consistent across situations, and self-monitoring tendencies play a role.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2812744" class="outline-3">
+<h3 id="org2812744"><span class="section-number-3">3.5.</span> Biological Foundations of Personality</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-orgc17ee09" class="outline-4">
+<h4 id="orgc17ee09"><span class="section-number-4">3.5.1.</span> Genetics and Environment</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+Genetics contribute to about half of personality test variance. Evolutionary theories link personality to natural selection.
+</p>
+</div>
+</div>
+<div id="outline-container-org95fa8ea" class="outline-4">
+<h4 id="org95fa8ea"><span class="section-number-4">3.5.2.</span> Eysenck&rsquo;s Theory</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<p>
+Introversion-extraversion and stability-instability reflect arousal levels.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc7c1cc8" class="outline-3">
+<h3 id="orgc7c1cc8"><span class="section-number-3">3.6.</span> Social-Cognitive Perspective</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-orgbcb09d2" class="outline-4">
+<h4 id="orgbcb09d2"><span class="section-number-4">3.6.1.</span> Reciprocal Determinism</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<p>
+Behavior results from interactions between individuals, their behavior, and the environment.
+</p>
+</div>
+</div>
+<div id="outline-container-org6f37232" class="outline-4">
+<h4 id="org6f37232"><span class="section-number-4">3.6.2.</span> Rotter&rsquo;s Expectancy Theory</h4>
+<div class="outline-text-4" id="text-3-6-2">
+<p>
+Behavior is influenced by expectancies and reinforcement values.
+</p>
+</div>
+</div>
+<div id="outline-container-orgae11a3e" class="outline-4">
+<h4 id="orgae11a3e"><span class="section-number-4">3.6.3.</span> Bandura&rsquo;s Self-Efficacy</h4>
+<div class="outline-text-4" id="text-3-6-3">
+<p>
+Relates to one&rsquo;s perceived ability to achieve goals in specific situations.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc846f32" class="outline-4">
+<h4 id="orgc846f32"><span class="section-number-4">3.6.4.</span> Mischel and Shoda&rsquo;s CAPS</h4>
+<div class="outline-text-4" id="text-3-6-4">
+<p>
+Individual differences in encoding strategies, expectancies, and emotions influence behavior.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org05b27b8"></a>Expectancies and beliefs<br /></li>
+<li><a id="orgb995da6"></a>Goals and values<br /></li>
+<li><a id="orged27b7c"></a>Encoding strategies<br /></li>
+<li><a id="org78ec20d"></a>Affects<br /></li>
+<li><a id="org2194fb8"></a>Competencies and self-regulation processes<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org56c01c0" class="outline-3">
+<h3 id="org56c01c0"><span class="section-number-3">3.7.</span> Culture, Gender, and Personality</h3>
+<div class="outline-text-3" id="text-3-7">
+</div>
+<div id="outline-container-org4e4d14a" class="outline-4">
+<h4 id="org4e4d14a"><span class="section-number-4">3.7.1.</span> Cultural Differences</h4>
+<div class="outline-text-4" id="text-3-7-1">
+<p>
+Cultures vary in complexity, tightness, and individualism-collectivism, impacting personality development.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd2dca4f" class="outline-4">
+<h4 id="orgd2dca4f"><span class="section-number-4">3.7.2.</span> Gender Schemas</h4>
+<div class="outline-text-4" id="text-3-7-2">
+<p>
+Organized mental structures define attributes and behaviors considered appropriate for males and females.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org71f5e34" class="outline-3">
+<h3 id="org71f5e34"><span class="section-number-3">3.8.</span> Personality Assessment</h3>
+<div class="outline-text-3" id="text-3-8">
+</div>
+<div id="outline-container-org23c1581" class="outline-4">
+<h4 id="org23c1581"><span class="section-number-4">3.8.1.</span> Methods</h4>
+<div class="outline-text-4" id="text-3-8-1">
+<p>
+Psychologists use interviews, behavioral assessments, personality scales, and projective tests.
+</p>
+</div>
+</div>
+<div id="outline-container-orge4f5c0d" class="outline-4">
+<h4 id="orge4f5c0d"><span class="section-number-4">3.8.2.</span> Personality Scales</h4>
+<div class="outline-text-4" id="text-3-8-2">
+<p>
+Constructed through rational-theoretical or empirical approaches.
+</p>
+</div>
+</div>
+<div id="outline-container-org1d9f1ba" class="outline-4">
+<h4 id="org1d9f1ba"><span class="section-number-4">3.8.3.</span> Projective Tests</h4>
+<div class="outline-text-4" id="text-3-8-3">
+<p>
+Rorschach and Thematic Apperception Test use ambiguous stimuli to reveal internal processes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5b4a1bb" class="outline-2">
+<h2 id="org5b4a1bb"><span class="section-number-2">4.</span> Week 10 and 11 - pages 696 - 704 (social chapter 17)</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org4d0f16d" class="outline-3">
+<h3 id="org4d0f16d"><span class="section-number-3">4.1.</span> Social Thinking</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org20de28e" class="outline-4">
+<h4 id="org20de28e"><span class="section-number-4">4.1.1.</span> Attribution Bias</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+We tend to underestimate situational factors in others&rsquo; behavior and show self-serving bias in our own successes and failures.
+</p>
+</div>
+</div>
+<div id="outline-container-org2a08eff" class="outline-4">
+<h4 id="org2a08eff"><span class="section-number-4">4.1.2.</span> First Impressions</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+They carry extra weight and are influenced by stereotypes and schemas.
+</p>
+</div>
+</div>
+<div id="outline-container-org2d3177f" class="outline-4">
+<h4 id="org2d3177f"><span class="section-number-4">4.1.3.</span> Attitudes and Behavior</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+Attitudes predict behavior best when situational influences are weak, the attitude is strong, and we consciously think about it. Behavior can also influence attitudes through cognitive dissonance.
+</p>
+</div>
+</div>
+<div id="outline-container-org3895ee2" class="outline-4">
+<h4 id="org3895ee2"><span class="section-number-4">4.1.4.</span> Persuasion</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<p>
+Communicator credibility, fear arousal, and the central or peripheral route to persuasion.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga740053" class="outline-3">
+<h3 id="orga740053"><span class="section-number-3">4.2.</span> Social Influence</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org503c4f0" class="outline-4">
+<h4 id="org503c4f0"><span class="section-number-4">4.2.1.</span> Conformity</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+Influenced by informational and normative social influence. Conformity levels are affected by the majority&rsquo;s size and the presence of a dissenter. Milgram&rsquo;s research on obedience.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc607af2" class="outline-4">
+<h4 id="orgc607af2"><span class="section-number-4">4.2.2.</span> Compliance Techniques</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+The norm of reciprocity and techniques like door-in-the-face, foot-in-the-door, and lowballing.
+</p>
+</div>
+</div>
+<div id="outline-container-org82d2ed2" class="outline-4">
+<h4 id="org82d2ed2"><span class="section-number-4">4.2.3.</span> Social Loafing</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<p>
+Occurs in group settings when individual effort decreases. Decreases with high goal value and performance monitoring.
+</p>
+</div>
+</div>
+<div id="outline-container-org2220fb7" class="outline-4">
+<h4 id="org2220fb7"><span class="section-number-4">4.2.4.</span> Group Decision-Making</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<p>
+Group polarization and groupthink.
+</p>
+</div>
+</div>
+<div id="outline-container-org0bfa401" class="outline-4">
+<h4 id="org0bfa401"><span class="section-number-4">4.2.5.</span> Deindividuation</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<p>
+Occurs in groups or crowds, often due to anonymity to outsiders.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee47cc5" class="outline-3">
+<h3 id="orgee47cc5"><span class="section-number-3">4.3.</span> Social Relations</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgdf363ad" class="outline-4">
+<h4 id="orgdf363ad"><span class="section-number-4">4.3.1.</span> Attraction</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+Proximity, mere exposure, similarity, and physical attractiveness enhance attraction. Social exchange theory and evolutionary and sociocultural perspectives on mate preferences.
+</p>
+</div>
+</div>
+<div id="outline-container-org2e0e0c9" class="outline-4">
+<h4 id="org2e0e0c9"><span class="section-number-4">4.3.2.</span> Ostracism</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+Produces negative psychological consequences and activates brain regions associated with physical pain.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa1b31a" class="outline-4">
+<h4 id="orgfa1b31a"><span class="section-number-4">4.3.3.</span> Prejudice</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+Stemming from in-group and out-group perception, in-group favoritism, and an out-group homogeneity bias. Ways to reduce prejudice.
+</p>
+</div>
+</div>
+<div id="outline-container-org8ccb974" class="outline-4">
+<h4 id="org8ccb974"><span class="section-number-4">4.3.4.</span> Prosocial Behavior</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+Influenced by genetic predisposition, social learning, and bystander intervention factors.
+</p>
+</div>
+</div>
+<div id="outline-container-org63dd29b" class="outline-4">
+<h4 id="org63dd29b"><span class="section-number-4">4.3.5.</span> Aggression</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<p>
+Influenced by heredity and various situational factors. Media violence&rsquo;s effect on aggression.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c50e89" class="outline-2">
+<h2 id="org9c50e89"><span class="section-number-2">5.</span> Week 12 - pages 745 - 764, 769 - 772 (cross-cultural chapter 18)</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orga535651" class="outline-3">
+<h3 id="orga535651"><span class="section-number-3">5.1.</span> Understand why it is important to look at cross-cultural and Indigenous issues</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgfa87128" class="outline-4">
+<h4 id="orgfa87128"><span class="section-number-4">5.1.1.</span> Appreciating Professional Development</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+Examining cross-cultural and Indigenous issues helps us understand the development of psychology as a profession and how these issues have evolved over time.
+</p>
+</div>
+</div>
+<div id="outline-container-org2850c8a" class="outline-4">
+<h4 id="org2850c8a"><span class="section-number-4">5.1.2.</span> Reflecting on Cultural Identity</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+Emphasizes critical reflection on our cultural makeup and its implications for practice and research. These reflective practices can become integral to a psychologist&rsquo;s ongoing development.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbfe9863" class="outline-3">
+<h3 id="orgbfe9863"><span class="section-number-3">5.2.</span> Describe the skills and knowledge that form the base of cross-cultural psychology</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org0d7f5a0" class="outline-4">
+<h4 id="org0d7f5a0"><span class="section-number-4">5.2.1.</span> Foundation of Cross-Cultural Psychology</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+Skills in critical reflection, understanding cultural competence, and addressing power dynamics in intercultural contexts are foundational. Cultural competence is not a straightforward solution but a complex concept.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd454dc6" class="outline-3">
+<h3 id="orgd454dc6"><span class="section-number-3">5.3.</span> Define multiculturalism and &rsquo;race&rsquo; and understand how Australia has worked toward being a multicultural society</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org99f104a" class="outline-4">
+<h4 id="org99f104a"><span class="section-number-4">5.3.1.</span> Multiculturalism and &rsquo;Race&rsquo;</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+Multiculturalism involves multiple cultures coexisting within a country, while &rsquo;race&rsquo; traditionally relies on phenotypical characteristics. &rsquo;Race&rsquo; is increasingly viewed as a social construction rather than a biological concept. Australia&rsquo;s multicultural identity is challenged by policies requiring conformity to dominant cultural norms.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8c42b5b" class="outline-3">
+<h3 id="org8c42b5b"><span class="section-number-3">5.4.</span> Evaluate how we look at the similarities and differences between cultures and understand the implications of these differences</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-orgaf3a704" class="outline-4">
+<h4 id="orgaf3a704"><span class="section-number-4">5.4.1.</span> Approaches to Cultural Differences</h4>
+<div class="outline-text-4" id="text-5-4-1">
+<p>
+Researchers use etic (commonalities or differences across cultures) and emic (specific psychological aspects of a culture) perspectives. It is essential to recognize cultural differences, develop cultural competence, and avoid assuming universality, especially in Australia&rsquo;s multicultural context.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf83836" class="outline-3">
+<h3 id="orgbf83836"><span class="section-number-3">5.5.</span> Define Indigenous psychology and understand how psychologists work with Indigenous Australians</h3>
+<div class="outline-text-3" id="text-5-5">
+</div>
+<div id="outline-container-org9f638d2" class="outline-4">
+<h4 id="org9f638d2"><span class="section-number-4">5.5.1.</span> Indigenous Psychology</h4>
+<div class="outline-text-4" id="text-5-5-1">
+<p>
+Refers to psychologies rooted in local sociocultural and geographical realities, emphasizing psychologists&rsquo; connection to their context.
+</p>
+</div>
+</div>
+<div id="outline-container-org7009182" class="outline-4">
+<h4 id="org7009182"><span class="section-number-4">5.5.2.</span> Ambiguous Position</h4>
+<div class="outline-text-4" id="text-5-5-2">
+<p>
+Psychologists may occupy an ambivalent or misunderstood position in the lives of Indigenous Australians. Awareness and explanation of psychology&rsquo;s role are crucial. Reconciliation with history is necessary to understand the profession&rsquo;s legacy in cross-cultural engagement.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7f54224" class="outline-3">
+<h3 id="org7f54224"><span class="section-number-3">5.6.</span> Describe how Indigenous research is produced and by whom</h3>
+<div class="outline-text-3" id="text-5-6">
+</div>
+<div id="outline-container-orgb0d89f7" class="outline-4">
+<h4 id="orgb0d89f7"><span class="section-number-4">5.6.1.</span> Indigenous Research</h4>
+<div class="outline-text-4" id="text-5-6-1">
+<p>
+Refers to research involving Indigenous people, with a growing focus on beneficence for participants. Indigenous Australian involvement in all research phases is increasing, emphasizing the benefits to Indigenous communities and the role of Indigenous people in shaping research questions and interpretations. Indigenous research involves collaboration and Indigenous direction in research processes.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2023-11-08 Wed 17:17</p>
+</div>
+</body>
+</html>
