@@ -1,0 +1,36 @@
+* Delegations
+| Task                         | Delegated to            |
+|------------------------------+-------------------------|
+| Exec summary                 | Samay                   |
+| TOC                          | Lachy                   |
+| List of figures              | Chantelle               |
+| List of tables               | Samay                   |
+| Intro                        | Sean                    |
+| Analysis Sections            | Multiple see next table |
+| Conclusion & reccomendations | Chantelle               |
+| References                   | Everyone                |
+| Appendix (appendicies)       | Chantelle               |
+
+| Analysis sections tasks                 | Delegated to |
+|-----------------------------------------+--------------|
+| Overview                                | Lachy        |
+| Prototyping process                     | Sean         |
+| testing process                         | Lachy        |
+| results                                 | Samay        |
+| assesment of final design & performance | Sean         |
+
+* Done [0%]
+- [ ] Exec Summary
+- [ ] TOC
+- [ ] List of figures
+- [ ] List of tables
+- [ ] Intro
+- [ ] Analysis section/s [0%]
+  - [ ] Overview
+  - [ ] Protoyping Process
+  - [ ] Tesitng process
+  - [ ] Results
+  - [ ] Assesment of final design & performance
+- [ ] Conclusion & reccomendations
+- [ ] References
+- [ ] Appendix ( appendicies )
