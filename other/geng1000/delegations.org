@@ -33,4 +33,6 @@
   - [ ] Assesment of final design & performance
 - [ ] Conclusion & reccomendations
 - [ ] References
-- [ ] Appendix ( appendicies )
+- [-] Appendix ( appendicies ) [50%]
+  - [X] Risk Analysis
+  - [ ] Other data
