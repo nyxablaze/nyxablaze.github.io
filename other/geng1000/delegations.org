@@ -25,11 +25,11 @@
 - [ ] List of figures
 - [ ] List of tables
 - [ ] Intro
-- [-] Analysis section/s [20%]
+- [-] Analysis section/s [40%]
   - [ ] Overview
   - [ ] Protoyping Process
   - [X] Tesitng process
-  - [ ] Results
+  - [X] Results
   - [ ] Assesment of final design & performance
 - [ ] Conclusion & reccomendations
 - [ ] References
