@@ -25,8 +25,8 @@
 - [ ] List of figures
 - [ ] List of tables
 - [ ] Intro
-- [-] Analysis section/s [20%]
-  - [ ] Overview
+- [-] Analysis section/s [40%]
+  - [X] Overview
   - [ ] Protoyping Process
   - [X] Tesitng process
   - [ ] Results
