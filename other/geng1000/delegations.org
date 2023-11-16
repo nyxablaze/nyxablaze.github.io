@@ -7,7 +7,7 @@
 | List of tables               | Samay                   |
 | Intro                        | Sean                    |
 | Analysis Sections            | Multiple see next table |
-| Conclusion & reccomendations | Chantelle               |
+| Conclusion & reccomendations | Samay                   |
 | References                   | Everyone                |
 | Appendix (appendicies)       | Chantelle               |
 
@@ -16,7 +16,7 @@
 | Overview                                | Lachy        |
 | Prototyping process                     | Sean         |
 | testing process                         | Lachy        |
-| results                                 | Samay        |
+| results                                 | Chantelle    |
 | assesment of final design & performance | Sean         |
 
 * Done [0%]
